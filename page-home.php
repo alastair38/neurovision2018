@@ -22,13 +22,13 @@ get_header(); ?>
 					<div class="container center">
 						<div class="col s12">
 							<?php $content = get_the_content();?>
-							<h2 class="thin"><?php echo $content; ?>
+							<h2 class="center home-quote"><?php echo $content; ?>
 </h2>
 						</div>
 					</div>
 
 				</div>
-				
+
 					<?php
 
 								get_template_part( 'parts/loop', 'page-home' );

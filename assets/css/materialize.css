@@ -6586,13 +6586,24 @@ div#about {
   margin-top: -20px;
   padding: 3rem 0; }
 
-h2.thin:before {
+h2.home-quote {
+  font-size: 2.28rem; }
+
+h2.home-quote:before {
   content: '\201C';
   font-family: serif;
   font-size: 5rem;
   color: #ee6e73;
   position: absolute;
-  left: 0; }
+  left: 3rem; }
+
+h2.home-quote:after {
+  content: '\201D';
+  font-family: serif;
+  font-size: 5rem;
+  color: #ee6e73;
+  position: absolute;
+  right: 3rem; }
 
 h2.thin {
   position: relative;
