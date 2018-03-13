@@ -14,12 +14,12 @@ function site_scripts() {
     // Adding Materialize scripts file in the footer
   wp_enqueue_script( 'materialize-js', 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js', array( 'jquery' ), '', true );
 
-    wp_enqueue_script( 'slick-js', 'http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js', array('jquery'), '', true );
+    wp_enqueue_script( 'slick-js', 'http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js', array('jquery', 'old-jquery'), '', true );
 
     wp_enqueue_script( 'cookie-js', 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js', array(), '', true );
 
     // Adding scripts file in the footer
-    wp_enqueue_script( 'site-js', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), '', true );
+    wp_enqueue_script( 'site-js', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery', 'old-jquery' ), '', true );
 
     // Register main stylesheet
 
@@ -36,10 +36,29 @@ function site_scripts() {
 
     wp_deregister_style( 'wp-admin' );
 
-
+    wp_enqueue_style( 'old-ie', get_template_directory_uri() . "/css/styleie.css", array( 'site-css' ), '20141010' );
+    wp_style_add_data( 'old-ie', 'conditional', 'lt IE 9' );
     // Comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
       wp_enqueue_script( 'comment-reply' );
     }
 }
 add_action('wp_enqueue_scripts', 'site_scripts', 999);
+
+add_action( 'wp_enqueue_scripts', 'cs_conditional_scripts_and_styles' );
+/**
+ * Enqueue styles and scripts conditionally.
+ *
+ * @link https://msdn.microsoft.com/en-us/library/ms537512(v=vs.85).aspx
+ * @since 1.0.0
+ */
+function cs_conditional_scripts_and_styles() {
+
+	/**
+	 * Enqueue flexiility.js script for users of IE9 and below.
+	 * @link: https://github.com/10up/flexibility
+	 */
+	  wp_enqueue_script( 'old-jquery', 'http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js', array(), '', false );
+	wp_script_add_data( 'old-jquery', 'conditional', 'lte IE 9' );
+
+}

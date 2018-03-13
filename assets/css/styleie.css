@@ -7,8 +7,7 @@
 }
 
 .lt-ie9 .menu-item a {
-  height: 56px;
-  line-height: 56px; }
+  height: 56px; }
 
 .lt-ie9 .reveal-modal {
   height:;
@@ -191,6 +190,11 @@
   right: 0;
   top: 0;
   height: 450px;
+}
+
+.lt-ie9 .slider article {
+  font-size: 1.5em !important;
+  padding: 6em 3.5em !important;
 }
 
 .lt-ie9 .home-quote {
