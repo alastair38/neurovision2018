@@ -36,7 +36,7 @@ function site_scripts() {
 
     wp_deregister_style( 'wp-admin' );
 
-    wp_enqueue_style( 'old-ie', get_template_directory_uri() . "/css/styleie.css", array( 'site-css' ), '20141010' );
+    wp_enqueue_style( 'old-ie', get_template_directory_uri() . "/assets/css/styleie.css", array( 'site-css' ), '20141010' );
     wp_style_add_data( 'old-ie', 'conditional', 'lt IE 9' );
     // Comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
@@ -58,7 +58,7 @@ function cs_conditional_scripts_and_styles() {
 	 * Enqueue flexiility.js script for users of IE9 and below.
 	 * @link: https://github.com/10up/flexibility
 	 */
-	  wp_enqueue_script( 'old-jquery', 'http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js', array(), '', false );
+	  wp_enqueue_script( 'old-jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js', array(), '', false );
 	wp_script_add_data( 'old-jquery', 'conditional', 'lte IE 9' );
 
 }
