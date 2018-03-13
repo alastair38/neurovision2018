@@ -2,13 +2,13 @@
   background: #2f8888;
   *zoom: 1;
   overflow: visible;
-  height: 50px;
+  height: 56px;
   width: 100%;
 }
 
 .lt-ie9 .menu-item a {
-  height: 50px;
-  line-height: 50px; }
+  height: 56px;
+  line-height: 56px; }
 
 .lt-ie9 .reveal-modal {
   height:;
@@ -22,7 +22,7 @@
 
 
 .lt-ie9 h1 {
-   font-size: 22px;
+   font-size: 3em !important;
 }
 
 .lt-ie9 .slider{
@@ -80,7 +80,7 @@
 }
 .lt-ie9 .navbar-fixed:after { clear: both; }
 .lt-ie9 .navbar-fixed .toggle-topbar { display: none; }
-.lt-ie9 .navbar-fixed .brand-logo { float: left; }
+.lt-ie9 .navbar-fixed .brand-logo { float: left; font-size: 2em; }
 .lt-ie9 .navbar-fixed .brand-logo a { width: auto; }
 .lt-ie9 .navbar-fixed input,
 .lt-ie9 .navbar-fixed .button {
@@ -190,7 +190,19 @@
   left: 0;
   right: 0;
   top: 0;
+  height: 450px;
+}
 
+.lt-ie9 .home-quote {
+  padding: 2em;
+}
+
+.lt-ie9 .home-quote:after {
+  right: 0;
+}
+
+.lt-ie9 .home-quote:after {
+  left: 0;
 }
 
 /* The Grid ---------------------- */
@@ -242,12 +254,15 @@
 .lt-ie9 .s12,
 .lt-ie9 .row .s12 { width: 100%; }
 
-.lt-ie9 .col .l4
- { width: 33.33333%; }
+.lt-ie9 .col .m6 .l4
+ { width: 33.33333% !important; }
 
  .lt-ie9 .col .m6
   { width: 50%; }
 
+.lt-ie9 .copyright {
+  padding: 0 !important;
+}
 
 .lt-ie9 .row .offset-s1 { margin-left: 8.33333%; }
 .lt-ie9 .row .offset-s2 { margin-left: 16.66667%; }
@@ -280,7 +295,7 @@
 .lt-ie9 .push-s9 { left: 75%; }
 .lt-ie9 .push-s10 { left: 83.33333%; }
 
-.lt-ie9 article {
+.lt-ie9 .page article, .lt-ie9 .post article,  {
   padding: 1.5em;
 }
 

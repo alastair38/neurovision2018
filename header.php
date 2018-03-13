@@ -29,6 +29,7 @@
 
   		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
+      <?php wp_head(); ?>
 
             <!--[if lt IE 9]>
         <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/styleie.css" />
@@ -39,7 +40,6 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
         <![endif]-->
 
-  		<?php wp_head(); ?>
 
 		<!-- Drop Google Analytics here -->
 		<!-- end analytics -->
