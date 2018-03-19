@@ -17,7 +17,9 @@
 	);
 
 	$slider_posts = get_posts( $args );
+	$i = 0;
 	foreach ( $slider_posts as $post ) :
+		$i++;
 		setup_postdata( $post );
 		$thumb_id = get_post_thumbnail_id();
 		$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'full', true);
@@ -26,7 +28,7 @@
 	// 	$currentDate = new DateTime();
 	// // this should only show an event if the event_date is either today or in the future
 	// 	if ( $eventDate >= $currentDate ) : ?>
-	<div style="background: url(<?php echo $thumb_url;?>) no-repeat center center; background-size: cover;">
+	<div id="slide-<?php echo $i;?>" style="background: url(<?php echo $thumb_url;?>) no-repeat center center; background-size: cover;">
 
 		 <article class="waves-effect flow-text"><a href="<?php the_permalink() ?>">
 			 <h3 class="light"><?php the_title(); ?></h3>

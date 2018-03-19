@@ -13,7 +13,7 @@
 
 
 		    <div class="col s12">
-					<div class="col s12">
+					<div id="filter_articles" class="col s12">
 					<a class="chip" href="#modal1">Filter Articles<i class="filter material-icons">filter_list</i></a>
 				</div>
 			    <?php if (have_posts()) : while (have_posts()) : the_post();

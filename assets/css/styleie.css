@@ -108,7 +108,9 @@
   float: right;
 }
 
-.lt-ie9 .side-nav, .lt-ie9 .button-collapse, .lt-ie9 #logo
+.lt-ie9 .side-nav, .lt-ie9 .button-collapse, .lt-ie9 #logo, .lt-ie9 #slide-2,
+.lt-ie9 #slide-3, .lt-ie9 #slide-4, .lt-ie9 #slide-5, .lt-ie9 #slide-6, .lt-ie9 #slide-7,
+.lt-ie9 #slide-8, .lt-ie9 #slide-9, .lt-ie9 #slide-10, .lt-ie9 #filter_articles
 
 {display: none !important;}
 
@@ -202,11 +204,11 @@
 }
 
 .lt-ie9 .home-quote:after {
-  right: 0;
+  right: 0 !important;
 }
 
 .lt-ie9 .home-quote:after {
-  left: 0;
+  left: 0 !important;
 }
 
 /* The Grid ---------------------- */
@@ -300,7 +302,7 @@
 .lt-ie9 .push-s10 { left: 83.33333%; }
 
 .lt-ie9 .page article, .lt-ie9 .post article,  {
-  padding: 1.5em;
+  padding: 1.5em !important;
 }
 
 .article-footer {
