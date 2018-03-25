@@ -7089,8 +7089,17 @@ label.byline {
   font-size: 1rem; }
 
 .blog .m6 .card {
-  height: 600px; }
+  min-height: 300px; }
 
+.post-type-archive-videos .card {
+  min-height: 400px; }
+.post-type-archive-videos .card-image {
+  min-height: 170px; }
+
+.post-type-archive-news .card {
+  min-height: 510px; }
+
+.post-type-archive-videos
 span#next {
   margin-left: 75%;
   text-align: center;

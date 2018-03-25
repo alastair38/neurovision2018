@@ -1,10 +1,11 @@
-<div class="row">
 
-	<ul class="tabs tabs-fixed-width">
+
+
 <?php
 // check if the repeater field has rows of data
 
 if( have_rows('tabs') ):
+	echo '<div class="row"><ul class="tabs tabs-fixed-width">';
   while ( have_rows('tabs') ) : the_row();
 	$tab_title = get_sub_field('tab_title');
 ?>
@@ -14,13 +15,14 @@ if( have_rows('tabs') ):
 
 <?php
 	endwhile;
+	echo '</ul></div>';
 	else :
 	    // no rows found
 	endif;
 ?>
-</ul>
 
-</div>
+
+
 
 <?php
 // check if the repeater field has rows of data

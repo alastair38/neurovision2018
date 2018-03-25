@@ -32,7 +32,7 @@ if (  is_home() || is_category() || is_post_type_archive() || is_tax('video_date
 			 ?>
 	    </div>
 	    <div class="modal-footer">
-	      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+	      <a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
 
 	    </div>
 	  </div>
