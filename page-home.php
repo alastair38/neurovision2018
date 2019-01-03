@@ -36,11 +36,6 @@ get_header(); ?>
 						endwhile; endif;
 					?>
 
-					<!-- byline and smooth scroll to content below the fold
-					<h4 style="font-style:italic; letter-spacing: 2px;" aria-hidden="true" class="grey-text thin">neuroscience, ethics and society</h4>
-					<a href="#starting"><i class="material-icons">keyboard_arrow_down</i></a>
-					 -->
-
 			 <!-- end #main -->
 
 	</main> <!-- end main -->

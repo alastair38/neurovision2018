@@ -14,7 +14,7 @@ function site_scripts() {
     // Adding Materialize scripts file in the footer
   wp_enqueue_script( 'materialize-js', 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js', array( 'jquery' ), '', true );
 
-    wp_enqueue_script( 'slick-js', 'http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js', array('jquery', 'old-jquery'), '', true );
+    wp_enqueue_script( 'slick-js', 'https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js', array('jquery', 'old-jquery'), '', true );
 
     wp_enqueue_script( 'cookie-js', 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js', array(), '', true );
 
@@ -24,10 +24,10 @@ function site_scripts() {
     // Register main stylesheet
 
     // Register material icons stylesheet
-    wp_enqueue_style( 'material-icons', 'http://fonts.googleapis.com/icon?family=Material+Icons', array(), '', 'all' );
+    wp_enqueue_style( 'material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), '', 'all' );
 
     // Register main stylesheet
-    wp_enqueue_style( 'slick-css', '//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css', array(), '', 'all' );
+    wp_enqueue_style( 'slick-css', 'https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css', array(), '', 'all' );
 
     // Register main stylesheet
     wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/css/materialize.css', array(), '', 'all' );
@@ -58,7 +58,7 @@ function cs_conditional_scripts_and_styles() {
 	 * Enqueue flexiility.js script for users of IE9 and below.
 	 * @link: https://github.com/10up/flexibility
 	 */
-	  wp_enqueue_script( 'old-jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js', array(), '', false );
+	  wp_enqueue_script( 'old-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js', array(), '', false );
 	wp_script_add_data( 'old-jquery', 'conditional', 'lte IE 9' );
 
 }
